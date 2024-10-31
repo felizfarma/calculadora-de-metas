@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px 10px;
+  padding-bottom: 0px;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards se movam para a linha seguinte quando necessário */
+  justify-content: center; /* Distribui os cards com espaço entre eles */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: fit-content;
+  max-width: 1200px;
+  width: 80vw;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1; /* Permite que os cards se ajustem ao espaço disponível */
+  min-width: 200px; /* Define uma largura mínima para os cards */
+  margin: 5px; /* Espaçamento entre os cards */
+  display: flex;
+  flex-direction: column; /* Alinha os itens em coluna */
+  max-width: min-content;
+  padding-right: 60px;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.card .sub {
+  padding-left: 10px;
+  border-left: 2px solid #007acc;
+  align-self: flex-start;
+}
+
+.input-group::after {
+  content: "- -";
+  position: relative;
+  top: -25px;
+  left: 7px;
+  font-size: 14px;
+  color: gray;
+}
+
+.currency::after {
+  content: "R$";
+}
+
+h2 {
+  color: #007acc;
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+h3 {
+  color: #007acc;
+  margin-bottom: 20px;
+  text-align: left; /* Alinha o título à esquerda */
+}
+
+.input-group {
+  width: 100%; /* Faz com que o input-group ocupe toda a largura do card */
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #007acc;
+  text-align: left; /* Alinha o texto do label à esquerda */
+}
+
+.input-group input {
+  width: 100%; /* Ajusta o input para a largura disponível dentro do input-group */
+  max-width: 200px; /* Define uma largura máxima para os inputs */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: left; /* Alinha o texto e o placeholder à esquerda dentro do input */
+  padding-left: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.input-group.double input.pct {
+  width: 30px;
+}
+
+.input-group span {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.button {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #007acc;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: 0.1s;
+  display: block;
+  margin-top: 40px;
+}
+
+.checkbox-container {
+  display: flex;
+  margin-top: 20px;
+  user-select: none;
+  justify-content: space-between;
+}
+
+.checkbox-container * {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox-container input[type=checkbox] {
+  width: 14px;
+  height: 14px;
+}
+
+.button:hover {
+  background-color: white;
+  color: #007acc;
+  border: 3px solid #007acc;
+  cursor: pointer;
+}
+
+.goals-card {
+  background-color: #ffebcc;
+}
+
+.with-percentage {
+  width: 60%;
+}

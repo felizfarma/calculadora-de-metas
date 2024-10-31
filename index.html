@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Metas</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Card de Vendas -->
+      <div class="card">
+        <h2>Vendas Totais</h2>
+        <div class="input-group currency">
+          <label for="totalSales">Total de Vendas</label>
+          <input
+            type="text"
+            id="totalSales"
+            value="0"
+            placeholder="Digite o valor total de vendas"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="egpSales"
+            >Total Vendido de EGP -
+            <span id="egpPercentage">0%</span></label
+          >
+          <input
+            type="text"
+            id="egpSales"
+            value="0"
+            class="with-percentage"
+            placeholder="Digite o valor vendido de EGP"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="perfumerySales"
+            >Total Vendido de Perfumaria -
+            <span id="perfumeryPercentage">0%</span></label
+          >
+          <input
+            type="text"
+            id="perfumerySales"
+            value="0"
+            class="with-percentage"
+            placeholder="Digite o valor vendido de Perfumaria"
+          />
+        </div>
+        <div class="input-group">
+          <label for="felizVitSales">Unidades Vendidas de Feliz Vit</label>
+          <input
+            type="number"
+            id="felizVitSales"
+            value="0"
+            placeholder="Digite as unidades vendidas de Feliz Vit"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="winterSales">Total Vendido de Inverno</label>
+          <input
+            type="text"
+            id="winterSales"
+            value="0"
+            placeholder="Digite o valor vendido de Inverno"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="katiguaSales">Total Vendido de Katiguá</label>
+          <input
+            type="text"
+            id="katiguaSales"
+            value="0"
+            placeholder="Digite o valor vendido de Katiguá"
+          />
+        </div>
+      </div>
+
+      <!-- Card de Metas -->
+      <div class="card goals-card">
+        <h2>Definir Metas</h2>
+        <div class="input-group currency">
+          <label for="totalGoal">Meta de Vendas Totais</label>
+          <input
+            type="text"
+            id="totalGoal"
+            value="0"
+            placeholder="Digite a meta de vendas totais"
+          />
+        </div>
+        <div class="input-group double currency">
+          <label for="egpGoal">Meta de Vendas de EGP</label>
+          <input
+            type="text"
+            id="egpGoal"
+            value="0"
+            placeholder="Digite a meta de vendas de EGP"
+          />
+          <!-- <input
+            type="text"
+            id="egpGoalPerc"
+            value="0"
+            class='pct'
+            placeholder="Digite porcentagem meta"
+          /> -->
+        </div>
+        <div class="input-group currency">
+          <label for="perfumeryGoal">Meta de Vendas de Perfumaria</label>
+          <input
+            type="text"
+            id="perfumeryGoal"
+            value="0"
+            placeholder="Digite a meta de vendas de Perfumaria"
+          />
+        </div>
+        <div class="input-group">
+          <label for="felizVitGoal">Meta de Unidades de Feliz Vit</label>
+          <input
+            type="number"
+            id="felizVitGoal"
+            value="0"
+            placeholder="Digite a meta de unidades de Feliz Vit"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="winterGoal">Meta de Vendas de Inverno</label>
+          <input
+            type="text"
+            id="winterGoal"
+            value="0"
+            placeholder="Digite a meta de vendas de Inverno"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="katiguaGoal">Meta de Vendas de Katiguá</label>
+          <input
+            type="text"
+            id="katiguaGoal"
+            value="0"
+            placeholder="Digite a meta de vendas de Katiguá"
+          />
+        </div>
+
+      </div>
+
+      <!-- Card de Projeções -->
+      <div class="card">
+        <h2>Projeção no Mês</h2>
+        <div class="input-group">
+          <label for="daysPassed">Dias Passados no Mês</label>
+          <input
+            type="number"
+            id="daysPassed"
+            placeholder="Digite o número de dias passados"
+          />
+        </div>
+        <div class="input-group currency">
+          <label for="totalProjection">Projeção de Vendas Totais</label>
+          <input type="text" id="totalProjection" value="0" readonly />
+        </div>
+        <div class="input-group currency">
+          <label for="egpProjection">Projeção de Vendas de EGP</label>
+          <input type="text" id="egpProjection" value="0" readonly />
+        </div>
+        <div class="input-group currency">
+          <label for="perfumeryProjection"
+            >Projeção de Vendas de Perfumaria</label
+          >
+          <input type="text" id="perfumeryProjection" value="0" readonly />
+        </div>
+        <div class="input-group">
+          <label for="felizVitProjection"
+            >Projeção de Unidades de Feliz Vit</label
+          >
+          <input type="text" id="felizVitProjection" value="0" readonly />
+        </div>
+        <div class="input-group currency">
+          <label for="winterProjection">Projeção de Vendas de Inverno</label>
+          <input type="text" id="winterProjection" value="0" readonly />
+        </div>
+        <div class="input-group currency">
+          <label for="katiguaProjection">Projeção de Vendas de Katiguá</label>
+          <input type="text" id="katiguaProjection" value="0" readonly />
+        </div>
+      </div>
+      <div class="card">
+        <span>
+          <h2>Configurações</h2>
+          <div class="sub">
+            <h3>Relatório</h3>
+            <div class="checkbox-container" title="Funcionalidade indisponível. Padrão: Ativado">
+              <label style="opacity: .5" for="showCategories">Mostrar Categorias</label>
+              <input type="checkbox" id="showCategories" disabled checked="true" />
+            </div>
+            <div class="checkbox-container">
+              <label for="showSales">Mostrar Vendas</label>
+              <input type="checkbox" id="showSales" checked="true" />
+            </div>
+            <div class="checkbox-container">
+              <label for="showGoals">Mostrar Metas</label>
+              <input type="checkbox" id="showGoals" checked="true" />
+            </div>
+            <div class="checkbox-container">
+              <label for="showProjections">Mostrar Projeções</label>
+              <input type="checkbox" id="showProjections" checked="true" />
+            </div>
+            <div class="checkbox-container">
+              <label for="showStatus">Mostrar Status</label>
+              <input type="checkbox" id="showStatus" checked="true" />
+            </div>
+            <div class="checkbox-container">
+              <label for="autoPrint">Imprimir Automaticamente</label>
+              <input type="checkbox" id="autoPrint" checked="true" />
+            </div>
+          </div>
+        </span>
+        <button
+          id="generateReport"
+          class="button max-width"
+          onclick="generateReport()"
+        >
+          Gerar Relatório
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
